@@ -4,16 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSA Tracker</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>DSA Tracker</h1>
-        <input type="text" id="new-topic" placeholder="Enter new topic">
-        <button onclick="addTopic()">Add</button>
-        <ul id="topic-list"></ul>
-    </div>
+    <h1>DSA Tracker</h1>
+    <input type="file" id="fileInput" />
+    <div id="topics"></div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
