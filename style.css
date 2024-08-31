@@ -1,48 +1,86 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 20px;
+    background-image: url('img.jpg');
+    background-size: auto; /* Ensures the image doesn't stretch */
+    background-position: top left; /* Aligns the image to the top left corner */
+    background-repeat: repeat; /* Repeats the image both horizontally and vertically */
+    color: white; /* Ensures text is readable on background */
+    text-align: center; /* Centers content inside the body */
 }
 
-.container {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+input[type="file"] {
+    display: inline-block; /* Ensures the file input behaves like a block element */
+    margin: 20px 0; /* Adds vertical space around the input */
+    font-size: 1.2em; /* Increases the font size for the file input */
+    padding: 10px; /* Adds padding inside the input */
+    border: 2px solid #007bff; /* Adds a border for better visibility */
+    border-radius: 5px; /* Rounds the corners of the border */
+    background-color: #fff; /* Sets a background color for the input */
+    color: #007bff; /* Sets the text color to match the border */
 }
 
 h1 {
     text-align: center;
+    font-size: 5em; /* Large font size for the heading */
+    margin: 0; /* Removes default margin */
+    padding: 20px; /* Adds some space around the heading */
 }
 
-input[type="text"] {
-    width: 70%;
-    padding: 10px;
-    margin-bottom: 10px;
+#topics {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Larger grid boxes */
+    gap: 20px; /* Increased space between grid items */
+    justify-content: center; /* Centers the grid items horizontally */
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+    display: block;
+    padding: 15px; /* Increased padding for larger buttons */
+    font-size: 1.2em; /* Larger font size for button text */
+    text-align: center;
+    background-color: #fff; /* White background for buttons */
+    color: #007bff; /* Blue text color for buttons */
+    border: 2px solid #007bff; /* Blue border around buttons */
+    border-radius: 5px; /* Rounded corners for buttons */
     cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions for hover effects */
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #f1f1f1; /* Light grey background on hover */
+    transform: scale(1.05); /* Slightly enlarges the button on hover */
 }
 
-ul {
-    list-style-type: none;
-    padding: 0;
+#problems-list {
+    list-style-type: none; /* Removes bullet points */
+    padding: 0; /* Removes padding */
+    margin: 20px 0; /* Adds vertical space */
+    display: flex; /* Uses flexbox for layout */
+    flex-direction: column; /* Stacks list items vertically */
+    align-items: center; /* Centers items horizontally */
 }
 
-li {
-    margin-bottom: 10px;
+#problems-list li {
+    font-size: 1.5em; /* Increases font size for list items */
+    margin: 10px 0; /* Adds vertical space between list items */
+    padding: 20px; /* Adds padding inside each list item */
+    background-color: #fff; /* White background for list items */
+    color: #007bff; /* Blue text color for list items */
+    border: 1px solid #007bff; /* Border around list items */
+    border-radius: 5px; /* Rounded corners for list items */
+    width: 500px; /* Sets the width for list items */
+    max-width: 4000px; /* Limits the maximum width */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    display: flex; /* Uses flexbox for positioning the checkbox */
+    align-items: center; /* Aligns items vertically in the center */
+    justify-content: flex-start; /* Aligns content to the start (left) */
+    position: relative; /* Positions items relatively for absolute positioning of the checkbox */
 }
 
-.completed {
-    text-decoration: line-through;
-    color: #888;
+#problems-list li input[type="checkbox"] {
+    position: absolute; /* Positions the checkbox absolutely within the list item */
+    left: -100px; /* Moves the checkbox outside the left of the list item */
+    top: 50%; /* Vertically centers the checkbox */
+    transform: translateY(-50%) scale(3); /* Adjusts for vertical centering and scales up */
 }
